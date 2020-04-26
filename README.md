@@ -1,38 +1,33 @@
-android-swipe-to-dismiss-undo
+Swipe to Dismiss
 =============================
 
-Library to make the items in a `ListView` or `RecyclerView` dismissable with the possibility to undo
-it, using your own view to provide this functionality like the Gmail app for Android does.
-
-
+Library to make the items in a `ListView` or `RecyclerView` swipe-dismissible with the possibility to undo
+the action, using your own view to provide this functionality like the Gmail app for Android does.
 
 <img src="sample.gif">
 
 
-Add the following to your `build.gradle`:
+Installation
+============
+Just add the following to your `build.gradle`:
 
     repositories {
 		mavenCentral()
 	}
 
 	dependencies {
-		implementation 'com.ma:swipe-to-dismiss-undo:1.0'
+		implementation 'com.github.mardillu:swipe-to-dismiss:1.0'
 	}
-	
-**Or**:
-
-* [Download the latest .jar file][https://oss.sonatype.org/content/repositories/releases/com/hudomju/swipe-to-dismiss-undo/1.0/swipe-to-dismiss-undo-1.0-sources.jar]
-* Add the .jar files to your project's `libs` folder, or add them as external jars to your project's
- build path.
 
 
 Create a Layout
 ===============
 
-To make an item in the list dismissable, you need ot place a ViewGroup (i.e. FrameLayout) as the 
+To make an item in the list dismissible, you need to make a ViewGroup (i.e. FrameLayout) as the
 root view of your layout. Inside the ViewGroup, add one view that contains the main content for 
-the row (your primary layout when the row hasn't been dismissed yet) and another view that contains 
-the contents of the dismiss layout (i.e. with an undo button).
+the row (the default layout when the row hasn't been dismissed yet) and another view that contains
+the contents of the dismiss layout (i.e. with an undo button). Your root layout should have at most
+two (2) direct child layouts.
 
 For example, the following layout uses a FrameLayout with two child views: a TextView to contain 
 the main content (populated by an Adapter at runtime), and a LinearLayout for the undo layout.
@@ -181,10 +176,9 @@ With a `RecyclerView`:
 Special Thanks
 ==============
 
-Romman Nurik for the initial contribution with [swipe to dismiss](https://github.com/romannurik/Android-SwipeToDismiss) for `ListView`
+Hugo Doménech Juárez for the initial contribution with [swipe to dismiss](https://github.com/hudomju/android-swipe-to-dismiss-undo)
 
-See the original [Google+ post](https://plus.google.com/+RomanNurik/posts/Fgo1p5uWZLu) for discussion.
+Connect with me
+==============
 
-See also [Jake Wharton's port](https://github.com/JakeWharton/SwipeToDismissNOA) of this sample code to old versions of Android using the [NineOldAndroids](http://nineoldandroids.com/) compatibility library.
-
-<img src="https://lh4.googleusercontent.com/-b0pxPcJBF1o/T-ZWx9NZSRI/AAAAAAAAe_Q/PAKmNzGSbzs/w635-h688-no/foo.png" width="300">
+Connect with me on [LinkedIn](https://gh.linkedin.com/in/mardillu), [Twitter](https://twitter.com/mardillu), [Instagram](https://www.instagram.com/mardillu/), [Facebook](https://www.facebook.com/ezekiel.sebastine)
